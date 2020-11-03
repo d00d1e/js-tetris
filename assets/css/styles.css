@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Pixel LCD";
+  src: url("font/Pixel-LCD-7.ttf");
+}
+
+body {
+  margin: 0;
+  margin-top: 100px;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Pixel LCD";
+  font-size: 2rem;
+  text-align: center;
+  min-height: 100vh;
+  background: url('../img/tetris-bg.jpg') no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+canvas {
+  border: 0.2em solid #fff;
+  display: block;
+  margin: 0 auto;
+  height: 70vh;
+}
+
+#score {
+  margin: 2rem;
+}
