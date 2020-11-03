@@ -233,13 +233,13 @@ const player = {
 
 // KEYBOARD HANDLER
 document.addEventListener('keydown', event => {
-  if (event.keyCode === 37) {
+  if (event.key === 'ArrowLeft') {
     playerMove(-1);
-  } else if (event.keyCode === 39) {
+  } else if (event.key === 'ArrowRight') {
     playerMove(1);
-  } else if (event.keyCode === 40) {
+  } else if (event.key === 'ArrowDown') {
     playerDrop();
-  } else if(event.keyCode === 32) {
+  } else if(event.key === ' ') {
     playerRotate(-1);
   }
 });
