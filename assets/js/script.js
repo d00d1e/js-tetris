@@ -217,7 +217,7 @@ function update(time = 0) {
 const arena = createMatrix(12, 20);
 
 function updateScore() {
-  document.getElementById('score').innerText = 'Score:' + player.score;
+  document.getElementById('score').innerText = 'Score: ' + player.score;
 }
 
 

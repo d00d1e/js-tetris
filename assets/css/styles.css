@@ -5,7 +5,6 @@
 
 body {
   margin: 0 auto;
-  /* margin-top: 100px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,4 +30,5 @@ canvas {
 
 #score {
   margin: 2rem;
+  font-size: 1.5vw;
 }
