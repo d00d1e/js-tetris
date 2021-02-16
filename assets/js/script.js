@@ -26,7 +26,7 @@ function rowClear() {
 
 function collide(arena, player) {
   const [m, o] = [player.matrix, player.pos];
-  
+
   for (let y = 0; y < m.length; ++y) {
     for (let x = 0; x < m[y].length; ++x) {
       if (m[y][x] !== 0 && (arena[y + o.y] && arena[y + o.y][x + o.x]) !== 0) {
@@ -34,7 +34,7 @@ function collide(arena, player) {
       }
     }
   }
-  return false; 
+  return false;
 }
 
 function createMatrix(w, h) {
@@ -93,7 +93,7 @@ function createTetrad(type) {
 }
 
 const colors = [
-  null, 
+  null,
   '#F0F000',
   '#00E5FE',
   '#F60103',
@@ -105,7 +105,7 @@ const colors = [
 
 function draw() {
   context.fillStyle = '#000';
-  context.fillRect(0, 0, canvas.width, canvas.height);  
+  context.fillRect(0, 0, canvas.width, canvas.height);
   drawMatrix(arena, {x: 0, y:0});
   drawMatrix(player.matrix, player.pos);
 }
@@ -133,7 +133,7 @@ function merge(arena, player) {
 
 function playerDrop() {
   player.pos.y++;
-  
+
   if (collide(arena, player)) {
     player.pos.y--;
     merge(arena, player);
@@ -196,8 +196,6 @@ function rotate(matrix, dir) {
 }
 
 
-
-
 // GAME TETRADS
 let dropCounter = 0;
 let dropInterval = 1000;
@@ -206,12 +204,12 @@ let lastTime = 0;
 function update(time = 0) {
   const deltaTime = time - lastTime;
   lastTime = time;
-  
+
   dropCounter += deltaTime;
   if (dropCounter > dropInterval) {
     playerDrop();
   }
-  
+
   draw();
   requestAnimationFrame(update);
 }
@@ -219,7 +217,7 @@ function update(time = 0) {
 const arena = createMatrix(12, 20);
 
 function updateScore() {
-  document.getElementById('score').innerText = player.score;
+  document.getElementById('score').innerText = 'Score:' + player.score;
 }
 
 

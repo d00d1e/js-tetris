@@ -4,8 +4,12 @@
 }
 
 body {
-  margin: 0;
-  margin-top: 100px;
+  margin: 0 auto;
+  /* margin-top: 100px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   box-sizing: border-box;
   color: #fff;
@@ -13,7 +17,7 @@ body {
   font-size: 2rem;
   text-align: center;
   min-height: 100vh;
-  background: url('../img/tetris-bg.jpg') no-repeat center;
+  background: url("../img/tetris-bg.jpg") no-repeat center;
   background-size: cover;
   overflow: hidden;
 }
@@ -22,7 +26,7 @@ canvas {
   border: 0.2em solid #fff;
   display: block;
   margin: 0 auto;
-  height: 70vh;
+  height: 60vh;
 }
 
 #score {
