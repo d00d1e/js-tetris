@@ -16,7 +16,7 @@ body {
   font-size: 2rem;
   text-align: center;
   min-height: 100vh;
-  background: url("../img/tetris-bg.jpg") no-repeat center;
+  background: #000 url("../img/tetris-bg.jpg") no-repeat center;
   background-size: cover;
   overflow: hidden;
 }
